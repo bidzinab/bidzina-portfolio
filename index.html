@@ -5,357 +5,237 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bidzina Mosiashvili | Marketing & Learning Design</title>
   <meta name="description" content="Bidzina Mosiashvili — marketing, learning design, and program coordination. Portfolio, experience, and contact." />
-  <meta name="theme-color" content="#0b0f19" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#ffffff" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="dot"></span>
-        <span>Bidzina</span>
-      </a>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div>
+        <strong>Bidzina Mosiashvili</strong>
+        <span class="small" style="margin-left:10px;">Marketing • Learning Design • Programs</span>
+      </div>
 
-      <nav class="links" aria-label="Primary">
+      <div>
         <a href="#about">About</a>
+        <a href="#metrics">Impact</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Highlights</a>
         <a href="#skills">Skills</a>
-        <a href="#contact" class="btn small">Contact</a>
-      </nav>
-
-      <button class="menu" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="container mobile" hidden>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Highlights</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact" class="btn small">Contact</a>
-    </div>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <main id="main">
+  <main id="main" class="container">
+
     <!-- HERO -->
     <section id="top" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <p class="pill">Personal portfolio • Job search ready</p>
-          <h1>
-            Marketing & learning design professional building
-            <span class="grad">clear systems</span> and
-            <span class="grad">high-trust experiences</span>.
-          </h1>
+      <h1>Bidzina Mosiashvili</h1>
+      <p>
+        Marketing and learning design professional with experience in program coordination, AI-enhanced education,
+        and SaaS growth marketing. I’m interested in roles at the intersection of learning, operations, and entrepreneurship.
+      </p>
 
-          <p class="sub">
-            I blend performance marketing, program coordination, and AI-enhanced learning work to help teams ship
-            smoother experiences for customers, learners, and communities.
-          </p>
+      <p class="small">Calgary, AB (Remote-friendly) • Available early 2026</p>
 
-          <div class="cta">
-            <a class="btn" href="#contact">Get in touch</a>
-            <a class="btn ghost" href="#projects">See highlights</a>
-          </div>
+      <div style="margin-top:16px;">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn" href="#projects" style="margin-left:10px;">See highlights</a>
 
-          <div class="meta">
-            <div class="meta-item">
-              <div class="k">Location</div>
-              <div class="v">Calgary, AB (Remote-friendly)</div>
-            </div>
-            <div class="meta-item">
-              <div class="k">Focus</div>
-              <div class="v">Programs • Learning • Growth</div>
-            </div>
-            <div class="meta-item">
-              <div class="k">Availability</div>
-              <div class="v">Early 2026</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="card portrait">
-            <div class="portrait-top">
-              <div class="avatar" aria-hidden="true">BM</div>
-              <div>
-                <div class="name">Bidzina Mosiashvili</div>
-                <div class="role">Marketing • Learning Design • Operations</div>
-              </div>
-            </div>
-
-            <div class="portrait-body">
-              <div class="row">
-                <span class="tag">Program Coordination</span>
-                <span class="tag">Curriculum Support</span>
-                <span class="tag">Google Ads</span>
-              </div>
-              <div class="row">
-                <span class="tag">SEO / UX</span>
-                <span class="tag">Stakeholders</span>
-                <span class="tag">Facilitation</span>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="quick">
-                <div>
-                  <div class="k">Recent work</div>
-                  <div class="v">AI role-play simulations (MRU)</div>
-                </div>
-                <div>
-                  <div class="k">Past</div>
-                  <div class="v">24-month SaaS marketing internship</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="portrait-actions">
-              <a class="btn small" href="#experience">View experience</a>
-              <a class="btn small ghost" href="#contact">Email me</a>
-            </div>
-          </div>
-
-          <p class="note">
-            Tip: Replace “BM” with your headshot later (easy). This site is fast, mobile-friendly, and free to host.
-          </p>
-        </div>
+        <!-- Resume download + tracking -->
+        <a class="btn" id="resumeBtn" href="resume.pdf" target="_blank" rel="noreferrer" style="margin-left:10px;">
+          Download Resume (PDF)
+        </a>
+        <span id="resumeCount" class="small" style="margin-left:10px;"></span>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>About</h2>
-          <p>Quick snapshot you can keep consistent across applications.</p>
-        </div>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I’m completing my BBA (Marketing) at Mount Royal University while building experience across learning design,
+        program delivery, and performance marketing. I’ve worked in small, fast-moving teams where clear communication,
+        strong systems, and thoughtful execution are the difference between “good ideas” and real outcomes.
+      </p>
+      <p>
+        I’m especially interested in roles that combine curriculum support, speaker coordination, event logistics,
+        learner experience, and continuous improvement loops.
+      </p>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Profile</h3>
-            <p>
-              I’m a marketing and learning design professional completing my BBA (Marketing) at Mount Royal University.
-              I’ve worked in fast-moving teams where strong systems, clear communication, and thoughtful execution make
-              programs and campaigns actually land.
-            </p>
-            <p>
-              I’m especially interested in roles at the intersection of learning, entrepreneurship, and operations
-              (program delivery, speaker support, curriculum resources, evaluation loops).
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What I’m known for</h3>
-            <ul class="list">
-              <li><span class="check">✓</span> Turning expert input into clear slides, worksheets, and session plans</li>
-              <li><span class="check">✓</span> Coordinating logistics so facilitators and learners can shine</li>
-              <li><span class="check">✓</span> Using feedback + data to improve what happens next</li>
-              <li><span class="check">✓</span> Balancing creative polish with operational reliability</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <h3>What I’m known for</h3>
+      <ul>
+        <li>Turning expert input into clear slides, worksheets, exercises, and session plans</li>
+        <li>Coordinating logistics so facilitators and learners can shine</li>
+        <li>Using feedback + data to improve what happens next</li>
+        <li>Balancing creative polish with operational reliability</li>
+      </ul>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Experience</h2>
-          <p>Selected roles most relevant to learning design + program delivery.</p>
+    <!-- METRICS -->
+    <section id="metrics">
+      <h2>Impact snapshot</h2>
+      <div class="metrics-grid">
+        <div class="metric">
+          <div class="metric-num">48,000+</div>
+          <div class="small">Users reached via web + campaign improvements</div>
         </div>
+        <div class="metric">
+          <div class="metric-num">56</div>
+          <div class="small">Qualified monthly sign-ups (campaign performance)</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">2</div>
+          <div class="small">Conference presentations (AI-enhanced learning)</div>
+        </div>
+      </div>
+      <p class="small" style="margin-top:10px;">
+        (Metrics can be adjusted to match exactly what you want to claim publicly.)
+      </p>
+    </section>
 
-        <div class="timeline">
-          <article class="tl card">
-            <div class="tl-top">
-              <div>
-                <h3>Research Assistant — AI in Education</h3>
-                <p class="muted">Mount Royal University • Aug 2025 – Dec 2025 • Calgary (Hybrid)</p>
-              </div>
-              <span class="badge">Learning Design</span>
+    <!-- EXPERIENCE (Timeline) -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>Research Assistant — AI in Education</h3>
+              <span class="small">Mount Royal University · Aug 2025 – Dec 2025</span>
             </div>
-            <ul class="bullets">
+            <ul>
               <li>Supported faculty-led research on AI-enhanced learning focused on leadership development and engagement.</li>
               <li>Assisted in designing and testing AI-driven role-play simulations for classroom use.</li>
               <li>Co-presented findings at conferences (SoTL Symposium, Innovations in Education).</li>
             </ul>
-          </article>
+          </div>
+        </div>
 
-          <article class="tl card">
-            <div class="tl-top">
-              <div>
-                <h3>Marketing Intern</h3>
-                <p class="muted">PayTickr (Payroll + Time Tracking SaaS) • Apr 2023 – May 2025 • Calgary</p>
-              </div>
-              <span class="badge">Growth</span>
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>Marketing Intern — PayTickr (SaaS)</h3>
+              <span class="small">Apr 2023 – May 2025</span>
             </div>
-            <ul class="bullets">
+            <ul>
               <li>Managed and optimized Google Ads campaigns; improved engagement and reduced bounce rate.</li>
-              <li>Expanded website user base through keyword optimization, SEO, and continuous performance analysis.</li>
-              <li>Produced branded collateral and supported cross-functional marketing execution (design, web, social).</li>
+              <li>Expanded website user base through keyword optimization, SEO, and performance analysis.</li>
+              <li>Produced collateral and supported cross-functional execution across design, web, and outreach.</li>
             </ul>
-          </article>
+          </div>
+        </div>
 
-          <article class="tl card">
-            <div class="tl-top">
-              <div>
-                <h3>Director of Communications (Volunteer)</h3>
-                <p class="muted">Calgary & District Beekeepers Association • 2024 – Present • Calgary</p>
-              </div>
-              <span class="badge">Programs</span>
+        <div class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-content">
+            <div class="t-top">
+              <h3>Director of Communications (Volunteer)</h3>
+              <span class="small">Calgary & District Beekeepers Association · 2024 – Present</span>
             </div>
-            <ul class="bullets">
-              <li>Develop communication plans and resources for a 400+ member community.</li>
+            <ul>
+              <li>Develop communications and resources for a 400+ member community.</li>
               <li>Support event promotion, member updates, and education initiatives.</li>
             </ul>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS / PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Highlights</h2>
-          <p>Proof of impact + range (learning, growth, leadership).</p>
-        </div>
+    <!-- HIGHLIGHTS / PROJECTS (Filter) -->
+    <section id="projects">
+      <h2>Highlights</h2>
+      <p class="small">Filter by focus area:</p>
 
-        <div class="cards-3">
-          <div class="card">
-            <h3>AI Role-Play Simulations</h3>
-            <p class="muted">Learning design • evaluation • facilitation support</p>
-            <p>
-              Helped shape AI-supported role-play activities that improve leadership learning, reflection, and student engagement.
-            </p>
-            <div class="mini">
-              <span class="chip">Slides</span>
-              <span class="chip">Exercises</span>
-              <span class="chip">Iteration loops</span>
-            </div>
-          </div>
+      <div class="filter-bar" role="tablist" aria-label="Project filters">
+        <button class="filter-btn active" data-filter="all" role="tab">All</button>
+        <button class="filter-btn" data-filter="learning" role="tab">Learning</button>
+        <button class="filter-btn" data-filter="marketing" role="tab">Marketing</button>
+        <button class="filter-btn" data-filter="leadership" role="tab">Leadership</button>
+      </div>
 
-          <div class="card">
-            <h3>SaaS Growth Marketing</h3>
-            <p class="muted">Google Ads • SEO • UX</p>
-            <p>
-              Ran campaign optimization and website improvements focused on quality traffic, clarity, and conversion.
-            </p>
-            <div class="mini">
-              <span class="chip">Google Ads</span>
-              <span class="chip">Keyword strategy</span>
-              <span class="chip">UX fixes</span>
-            </div>
-          </div>
+      <div class="projects-grid">
+        <article class="project" data-tags="learning leadership">
+          <h3>AI Role-Play Simulations</h3>
+          <p class="small">Learning design • evaluation • facilitation support</p>
+          <p>Helped shape AI-supported role-play activities that improve reflection and engagement.</p>
+        </article>
 
-          <div class="card">
-            <h3>Community & Communications</h3>
-            <p class="muted">Programs • stakeholder coordination</p>
-            <p>
-              Coordinate communications and resources for education-focused community initiatives and events.
-            </p>
-            <div class="mini">
-              <span class="chip">Templates</span>
-              <span class="chip">Event comms</span>
-              <span class="chip">Documentation</span>
-            </div>
-          </div>
-        </div>
+        <article class="project" data-tags="marketing">
+          <h3>SaaS Growth Marketing</h3>
+          <p class="small">Google Ads • SEO • UX</p>
+          <p>Optimized campaigns and landing-page clarity to improve quality traffic and conversion.</p>
+        </article>
 
-        <div class="callout card">
-          <div>
-            <h3>Want this tailored to a specific job?</h3>
-            <p class="muted">I can quickly swap your highlights to match any posting (like VFC ETA) and keep it ATS-friendly.</p>
-          </div>
-          <a class="btn" href="#contact">Let’s customize</a>
-        </div>
+        <article class="project" data-tags="leadership learning">
+          <h3>Program Support & Communications</h3>
+          <p class="small">Program operations • stakeholder coordination</p>
+          <p>Built templates and communications that support education initiatives and events.</p>
+        </article>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Skills</h2>
-          <p>Tools + strengths that show up repeatedly in my work.</p>
-        </div>
+    <section id="skills">
+      <h2>Skills</h2>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Tools</h3>
-            <div class="pills">
-              <span class="pill2">Google Workspace</span>
-              <span class="pill2">Microsoft Office</span>
-              <span class="pill2">Zoom</span>
-              <span class="pill2">Slack</span>
-              <span class="pill2">Canva</span>
-              <span class="pill2">WordPress / Webflow</span>
-              <span class="pill2">Adobe (PS/AI/Acrobat)</span>
-              <span class="pill2">Google Ads</span>
-            </div>
-          </div>
+      <h3>Tools</h3>
+      <p class="small">
+        Google Workspace • Microsoft Office • Zoom • Slack • Canva • WordPress • Adobe (PS/AI/Acrobat) • Google Ads
+      </p>
 
-          <div class="card">
-            <h3>Strengths</h3>
-            <ul class="list">
-              <li><span class="check">✓</span> Program delivery & logistics</li>
-              <li><span class="check">✓</span> Learner + facilitator experience</li>
-              <li><span class="check">✓</span> Curriculum resource creation</li>
-              <li><span class="check">✓</span> Stakeholder coordination</li>
-              <li><span class="check">✓</span> Documentation + templates</li>
-              <li><span class="check">✓</span> Feedback → improvements</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <h3>Strengths</h3>
+      <ul>
+        <li>Program delivery & logistics</li>
+        <li>Learner + facilitator experience</li>
+        <li>Curriculum resource creation</li>
+        <li>Stakeholder coordination</li>
+        <li>Documentation + templates</li>
+        <li>Feedback → improvements</li>
+      </ul>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Contact</h2>
-          <p>Fastest way to reach me.</p>
-        </div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="small">Fastest way to reach me:</p>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Email</h3>
-            <p class="muted">Click to open your email client:</p>
-            <p>
-              <a class="link" href="mailto:Bidmosia@gmail.com?subject=Hello%20Bidzina%20%E2%80%94%20Opportunity&body=Hi%20Bidzina%2C%0A%0A">Bidmosia@gmail.com</a>
-            </p>
-            <p class="muted">Phone: <a class="link" href="tel:+15872206104">587-220-6104</a></p>
-          </div>
+      <p>
+        Email:
+        <a class="link" href="mailto:Bidmosia@gmail.com?subject=Hello%20Bidzina%20%E2%80%94%20Opportunity&body=Hi%20Bidzina%2C%0A%0A">
+          Bidmosia@gmail.com
+        </a>
+        <button id="copyEmail" class="copy-btn" type="button" style="margin-left:10px;">Copy email</button>
+        <span id="copyStatus" class="small" style="margin-left:10px;"></span>
+      </p>
 
-          <div class="card">
-            <h3>Links</h3>
-            <p class="muted">Add your URLs below:</p>
-            <ul class="links-list">
-              <li><span>LinkedIn</span> <a class="link" href="#" target="_blank" rel="noreferrer">Add your link</a></li>
-              <li><span>Resume PDF</span> <a class="link" href="#" target="_blank" rel="noreferrer">Add your link</a></li>
-              <li><span>Portfolio / Work</span> <a class="link" href="#" target="_blank" rel="noreferrer">Add your link</a></li>
-            </ul>
-            <p class="muted tiny">Tip: once hosted, you can upload a PDF resume into the repo and link it here.</p>
-          </div>
-        </div>
+      <p class="small">
+        Phone: <a class="link" href="tel:+15872206104">587-220-6104</a>
+      </p>
 
-        <footer class="footer">
-          <p>© <span id="year"></span> Bidzina Mosiashvili • Built with static HTML/CSS (free hosting)</p>
-        </footer>
-      </div>
+      <h3>Links</h3>
+      <ul>
+        <li>LinkedIn: <a class="link" href="#" target="_blank" rel="noreferrer">Add your link</a></li>
+        <li>Resume PDF: <a class="link" href="resume.pdf" target="_blank" rel="noreferrer">resume.pdf</a></li>
+        <li>Other work: <a class="link" href="#" target="_blank" rel="noreferrer">Add your link</a></li>
+      </ul>
     </section>
+
+    <footer>
+      <p>© <span id="year"></span> Bidzina Mosiashvili • Built with static HTML/CSS/JS (free hosting via GitHub Pages)</p>
+    </footer>
+
   </main>
 
   <script src="script.js"></script>
 </body>
 </html>
+
