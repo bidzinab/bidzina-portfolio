@@ -3,239 +3,614 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bidzina Mosiashvili | Marketing & Learning Design</title>
-  <meta name="description" content="Bidzina Mosiashvili — marketing, learning design, and program coordination. Portfolio, experience, and contact." />
-  <meta name="theme-color" content="#ffffff" />
+  <title>Bidzina Mosiashvili | AI-Enhanced Marketing & Learning Design</title>
+  <meta name="description" content="Bidzina Mosiashvili — AI-enhanced marketing, learning design, and program coordination. Winner of Bissett Stock Market Competition. Interactive portfolio with measurable impact." />
+  <meta name="theme-color" content="#2563eb" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bidzina Mosiashvili | AI-Enhanced Marketing & Learning Design" />
+  <meta property="og:description" content="Winner of Bissett Stock Market Competition | AI Research | Marketing Analytics" />
+  <meta property="og:image" content="https://yourdomain.com/social-preview.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <!-- AI Assistant Chat Widget -->
+  <div id="ai-assistant" class="ai-assistant">
+    <div class="ai-header">
+      <div class="ai-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="ai-info">
+        <h4>Portfolio Assistant</h4>
+        <p>Ask me about Bidzina's experience</p>
+      </div>
+      <button id="close-ai" class="ai-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div id="ai-chat" class="ai-chat">
+      <div class="ai-message ai-response">
+        <p>Hi! I'm your AI assistant. Ask me about Bidzina's:</p>
+        <div class="ai-quick-questions">
+          <button data-question="Tell me about the Bissett Stock Market Competition win">🏆 Stock Market Win</button>
+          <button data-question="What AI research experience does he have?">🤖 AI Research</button>
+          <button data-question="Tell me about his marketing internship results">📈 Marketing Results</button>
+          <button data-question="What beekeeping initiatives is he involved in?">🐝 Beekeeping Projects</button>
+        </div>
+      </div>
+    </div>
+    <div class="ai-input">
+      <input type="text" id="ai-question" placeholder="Ask about experience, skills, projects...">
+      <button id="ai-send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
 
-  <!-- Header -->
-  <header>
-    <nav>
-      <div>
-        <strong>Bidzina Mosiashvili</strong>
-        <span class="small" style="margin-left:10px;">Marketing • Learning Design • Programs</span>
+  <!-- Navigation -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <div class="logo-mark">BM</div>
+        <div class="brand-text">
+          <h1>Bidzina Mosiashvili</h1>
+          <p class="tagline">Marketing • AI Education • Entrepreneurship</p>
+        </div>
       </div>
 
-      <div>
-        <a href="#about">About</a>
-        <a href="#metrics">Impact</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Highlights</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link cta-link">Contact</a>
+        
+        <!-- AI Assistant Toggle -->
+        <button id="toggle-ai" class="ai-toggle-btn">
+          <i class="fas fa-robot"></i>
+          <span>AI Assistant</span>
+        </button>
       </div>
     </nav>
   </header>
 
-  <main id="main" class="container">
-
-    <!-- HERO -->
-    <section id="top" class="hero">
-      <h1>Bidzina Mosiashvili</h1>
-      <p>
-        Marketing and learning design professional with experience in program coordination, AI-enhanced education,
-        and SaaS growth marketing. I’m interested in roles at the intersection of learning, operations, and entrepreneurship.
-      </p>
-
-      <p class="small">Calgary, AB (Remote-friendly) • Available early 2026</p>
-
-      <div style="margin-top:16px;">
-        <a class="btn" href="#contact">Get in touch</a>
-        <a class="btn" href="#projects" style="margin-left:10px;">See highlights</a>
-
-        <!-- Resume download + tracking -->
-        <a class="btn" id="resumeBtn" href="resume.pdf" target="_blank" rel="noreferrer" style="margin-left:10px;">
-          Download Resume (PDF)
-        </a>
-        <span id="resumeCount" class="small" style="margin-left:10px;"></span>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-background">
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
       </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I’m completing my BBA (Marketing) at Mount Royal University while building experience across learning design,
-        program delivery, and performance marketing. I’ve worked in small, fast-moving teams where clear communication,
-        strong systems, and thoughtful execution are the difference between “good ideas” and real outcomes.
-      </p>
-      <p>
-        I’m especially interested in roles that combine curriculum support, speaker coordination, event logistics,
-        learner experience, and continuous improvement loops.
-      </p>
-
-      <h3>What I’m known for</h3>
-      <ul>
-        <li>Turning expert input into clear slides, worksheets, exercises, and session plans</li>
-        <li>Coordinating logistics so facilitators and learners can shine</li>
-        <li>Using feedback + data to improve what happens next</li>
-        <li>Balancing creative polish with operational reliability</li>
-      </ul>
-    </section>
-
-    <!-- METRICS -->
-    <section id="metrics">
-      <h2>Impact snapshot</h2>
-      <div class="metrics-grid">
-        <div class="metric">
-          <div class="metric-num">48,000+</div>
-          <div class="small">Users reached via web + campaign improvements</div>
+    </div>
+    
+    <div class="hero-content container">
+      <div class="hero-text">
+        <div class="achievement-badge animate__animated animate__pulse">
+          <i class="fas fa-trophy"></i>
+          <span>Bissett Stock Market Competition Winner 2020</span>
         </div>
-        <div class="metric">
-          <div class="metric-num">56</div>
-          <div class="small">Qualified monthly sign-ups (campaign performance)</div>
+        
+        <h1 class="hero-title">
+          Building the Future of
+          <span class="gradient-text">AI-Enhanced</span>
+          <span class="highlight-text">Marketing & Education</span>
+        </h1>
+        
+        <p class="hero-description">
+          Fifth-Year Marketing Student at Mount Royal University specializing in 
+          <strong>AI-driven learning design</strong>, 
+          <strong>data-driven marketing</strong>, and 
+          <strong>entrepreneurial innovation</strong>.
+        </p>
+        
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number" data-count="78">0</div>
+            <div class="stat-label">% Stock Market Gain (Record)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-count="48000">0</div>
+            <div class="stat-label">Users Reached</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-count="5">0</div>
+            <div class="stat-label">Active Projects</div>
+          </div>
         </div>
-        <div class="metric">
-          <div class="metric-num">2</div>
-          <div class="small">Conference presentations (AI-enhanced learning)</div>
+        
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Connect Now
+          </a>
+          <a href="#achievements" class="btn btn-secondary">
+            <i class="fas fa-trophy"></i> View Achievements
+          </a>
+          <a href="Bidzina%20Mosiashvili%20-%20Resume%202025.2.pdf" 
+             class="btn btn-outline" 
+             id="resumeBtn" 
+             target="_blank"
+             onclick="trackResumeDownload()">
+            <i class="fas fa-file-pdf"></i> Download Resume
+            <span class="download-count" id="resumeCount">0</span>
+          </a>
+        </div>
+        
+        <div class="hero-location">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Calgary, AB • Available Early 2026 • Open to Remote</span>
         </div>
       </div>
-      <p class="small" style="margin-top:10px;">
-        (Metrics can be adjusted to match exactly what you want to claim publicly.)
-      </p>
-    </section>
+      
+      <div class="hero-visual">
+        <div class="visual-card">
+          <div class="card-header">
+            <h4>🚀 Quick Facts</h4>
+          </div>
+          <div class="card-body">
+            <div class="fact">
+              <i class="fas fa-university"></i>
+              <div>
+                <strong>Mount Royal University</strong>
+                <p>BBA Marketing • Graduating 2025</p>
+              </div>
+            </div>
+            <div class="fact">
+              <i class="fas fa-globe-europe"></i>
+              <div>
+                <strong>University of Porto</strong>
+                <p>Entrepreneurship & Innovation</p>
+              </div>
+            </div>
+            <div class="fact">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <strong>Marketing Analytics</strong>
+                <p>56 qualified sign-ups/month</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- EXPERIENCE (Timeline) -->
-    <section id="experience">
-      <h2>Experience</h2>
+  <!-- Key Achievements -->
+  <section id="achievements" class="achievements-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🏆 Record-Breaking Achievements</h2>
+        <p class="section-subtitle">Proven results in competitive environments</p>
+      </div>
+      
+      <div class="achievements-grid">
+        <div class achievement-card highlight-card">
+          <div class="achievement-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="achievement-content">
+            <h3>Bissett Stock Market Competition Winner</h3>
+            <p class="achievement-subtitle">Highest trading record in university history</p>
+            <div class="achievement-metrics">
+              <div class="metric">
+                <span class="metric-value">78%</span>
+                <span class="metric-label">Gain (vs. 25% previous record)</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">2020</span>
+                <span class="metric-label">Record still stands</span>
+              </div>
+            </div>
+            <p class="achievement-description">
+              Achieved the highest trading record in Mount Royal University's history, 
+              demonstrating exceptional analytical skills and strategic decision-making.
+            </p>
+          </div>
+        </div>
+        
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="achievement-content">
+            <h3>AI Education Research</h3>
+            <p class="achievement-subtitle">Co-presented at national conferences</p>
+            <div class="achievement-metrics">
+              <div class="metric">
+                <span class="metric-value">2</span>
+                <span class="metric-label">Conference Presentations</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">2025</span>
+                <span class="metric-label">Research Assistant</span>
+              </div>
+            </div>
+            <p class="achievement-description">
+              Co-presented research on AI-enhanced learning at SoTL Symposium and 
+              Innovations in Education Conference.
+            </p>
+          </div>
+        </div>
+        
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <div class="achievement-content">
+            <h3>Case Competition Runner-Up</h3>
+            <p class="achievement-subtitle">Birchcliff Energy Ltd. Competition</p>
+            <div class="achievement-metrics">
+              <div class="metric">
+                <span class="metric-value">2nd</span>
+                <span class="metric-label">Place Finish</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">C.A.N.L.E.A.D</span>
+                <span class="metric-label">Campaign Developed</span>
+              </div>
+            </div>
+            <p class="achievement-description">
+              Developed "C.A.N.L.E.A.D" campaign proposal for Canada's energy awareness, 
+              placing 2nd among competitive field.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Experience Timeline -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">💼 Professional Journey</h2>
+        <p class="section-subtitle">From AI research to marketing analytics</p>
+      </div>
+      
       <div class="timeline">
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <div class="t-top">
-              <h3>Research Assistant — AI in Education</h3>
-              <span class="small">Mount Royal University · Aug 2025 – Dec 2025</span>
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <i class="fas fa-flask"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Research Assistant – AI in Education</h3>
+              <span class="timeline-date">Aug 2025 – Dec 2025</span>
             </div>
-            <ul>
-              <li>Supported faculty-led research on AI-enhanced learning focused on leadership development and engagement.</li>
-              <li>Assisted in designing and testing AI-driven role-play simulations for classroom use.</li>
-              <li>Co-presented findings at conferences (SoTL Symposium, Innovations in Education).</li>
+            <p class="timeline-subtitle">Mount Royal University</p>
+            <ul class="timeline-list">
+              <li>Supported faculty-led research on AI-enhanced learning and teaching innovation</li>
+              <li>Designed and tested AI-driven role-play simulations for classroom use</li>
+              <li>Co-presented findings at SoTL Symposium and Innovations in Education Conference</li>
             </ul>
+            <div class="timeline-tags">
+              <span class="tag">AI Research</span>
+              <span class="tag">Learning Design</span>
+              <span class="tag">Conference Presentation</span>
+            </div>
           </div>
         </div>
-
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <div class="t-top">
-              <h3>Marketing Intern — PayTickr (SaaS)</h3>
-              <span class="small">Apr 2023 – May 2025</span>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Marketing Intern</h3>
+              <span class="timeline-date">Apr 2023 – May 2025</span>
             </div>
-            <ul>
-              <li>Managed and optimized Google Ads campaigns; improved engagement and reduced bounce rate.</li>
-              <li>Expanded website user base through keyword optimization, SEO, and performance analysis.</li>
-              <li>Produced collateral and supported cross-functional execution across design, web, and outreach.</li>
+            <p class="timeline-subtitle">PayTickr (SaaS)</p>
+            <ul class="timeline-list">
+              <li>Managed Google Ads campaigns generating <strong>56 qualified monthly sign-ups</strong></li>
+              <li>Expanded website user base by <strong>48,000+</strong> through SEO/UX optimization</li>
+              <li>Designed 3D-printed promotional materials and laser-cut coasters for branding</li>
+              <li>Maintained bounce rate under 40% and engagement rate above 60%</li>
             </ul>
+            <div class="timeline-tags">
+              <span class="tag">Google Ads</span>
+              <span class="tag">SEO</span>
+              <span class="tag">UX Optimization</span>
+              <span class="tag">3D Design</span>
+            </div>
           </div>
         </div>
-
-        <div class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-content">
-            <div class="t-top">
-              <h3>Director of Communications (Volunteer)</h3>
-              <span class="small">Calgary & District Beekeepers Association · 2024 – Present</span>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <i class="fas fa-bee"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Director of Communications</h3>
+              <span class="timeline-date">Jun 2024 – Present</span>
             </div>
-            <ul>
-              <li>Develop communications and resources for a 400+ member community.</li>
-              <li>Support event promotion, member updates, and education initiatives.</li>
+            <p class="timeline-subtitle">Calgary and District Beekeepers Association</p>
+            <ul class="timeline-list">
+              <li>Develop communication strategies for 400+ member community</li>
+              <li>Promote bee awareness and sustainable beekeeping practices</li>
+              <li>Coordinate event promotion and member education initiatives</li>
             </ul>
+            <div class="timeline-tags">
+              <span class="tag">Community Management</span>
+              <span class="tag">Strategic Communications</span>
+              <span class="tag">Volunteer Leadership</span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- HIGHLIGHTS / PROJECTS (Filter) -->
-    <section id="projects">
-      <h2>Highlights</h2>
-      <p class="small">Filter by focus area:</p>
-
-      <div class="filter-bar" role="tablist" aria-label="Project filters">
-        <button class="filter-btn active" data-filter="all" role="tab">All</button>
-        <button class="filter-btn" data-filter="learning" role="tab">Learning</button>
-        <button class="filter-btn" data-filter="marketing" role="tab">Marketing</button>
-        <button class="filter-btn" data-filter="leadership" role="tab">Leadership</button>
+  <!-- Projects Showcase -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🚀 Current Initiatives</h2>
+        <p class="section-subtitle">Entrepreneurship meets social impact</p>
       </div>
-
+      
       <div class="projects-grid">
-        <article class="project" data-tags="learning leadership">
-          <h3>AI Role-Play Simulations</h3>
-          <p class="small">Learning design • evaluation • facilitation support</p>
-          <p>Helped shape AI-supported role-play activities that improve reflection and engagement.</p>
-        </article>
-
-        <article class="project" data-tags="marketing">
-          <h3>SaaS Growth Marketing</h3>
-          <p class="small">Google Ads • SEO • UX</p>
-          <p>Optimized campaigns and landing-page clarity to improve quality traffic and conversion.</p>
-        </article>
-
-        <article class="project" data-tags="leadership learning">
-          <h3>Program Support & Communications</h3>
-          <p class="small">Program operations • stakeholder coordination</p>
-          <p>Built templates and communications that support education initiatives and events.</p>
-        </article>
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-bee"></i>
+          </div>
+          <div class="project-content">
+            <h3>1,000 Beehives Project</h3>
+            <p class="project-subtitle">Founder & Lead</p>
+            <p class="project-description">
+              Developing a five-year plan to address Alberta's beekeeper gap by 2030 
+              through accessible training programs. Currently managing 5 pilot projects.
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>5</strong>
+                <span>Active Pilots</span>
+              </div>
+              <div class="metric">
+                <strong>2030</strong>
+                <span>Target Goal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-podcast"></i>
+          </div>
+          <div class="project-content">
+            <h3>About Bees, Culture & Curiosity Podcast</h3>
+            <p class="project-subtitle">Founder & Host</p>
+            <p class="project-description">
+              Co-hosting podcast discussing bee culture, honey production, and 
+              the importance of pollinators in sustainable ecosystems.
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>Monthly</strong>
+                <span>Episodes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="project-content">
+            <h3>Director of Marketing</h3>
+            <p class="project-subtitle">Fuse Collective, University of Calgary</p>
+            <p class="project-description">
+              Leading marketing for student club with 20th anniversary campaigns 
+              and major events like "AB2050 Case Competition".
+            </p>
+            <div class="project-metrics">
+              <div class="metric">
+                <strong>20th</strong>
+                <span>Anniversary</span>
+              </div>
+              <div class="metric">
+                <strong>Team</strong>
+                <span>Leadership</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2>Skills</h2>
+  <!-- Skills Visualization -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🛠️ Core Competencies</h2>
+        <p class="section-subtitle">Technical skills and strategic strengths</p>
+      </div>
+      
+      <div class="skills-container">
+        <div class="skills-category">
+          <h3><i class="fas fa-chart-bar"></i> Marketing & Analytics</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">Google Ads & Analytics</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">SEO & UX Optimization</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Market Research</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-category">
+          <h3><i class="fas fa-tools"></i> Design & Technology</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">Adobe Creative Suite</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">WordPress/Webflow</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">3D Printing/Laser Cutting</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-category">
+          <h3><i class="fas fa-users"></i> Leadership & Strategy</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Strategic Planning</span>
+            <span class="skill-tag">Team Leadership</span>
+            <span class="skill-tag">Public Speaking</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Cross-functional Collaboration</span>
+            <span class="skill-tag">Data-driven Decision Making</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <h3>Tools</h3>
-      <p class="small">
-        Google Workspace • Microsoft Office • Zoom • Slack • Canva • WordPress • Adobe (PS/AI/Acrobat) • Google Ads
-      </p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">📬 Let's Connect</h2>
+        <p class="section-subtitle">Available for opportunities starting early 2026</p>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:Bidmosia@gmail.com" class="contact-link">Bidmosia@gmail.com</a>
+              <button class="copy-btn" data-clipboard-text="Bidmosia@gmail.com">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+15872206104" class="contact-link">587-220-6104</a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Calgary, Alberta</p>
+              <p class="small-text">Open to remote opportunities</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-cta">
+          <h3>Let's discuss opportunities</h3>
+          <p>I'm particularly interested in roles combining:</p>
+          <ul class="interest-list">
+            <li><i class="fas fa-check"></i> AI-enhanced learning design</li>
+            <li><i class="fas fa-check"></i> Program coordination & operations</li>
+            <li><i class="fas fa-check"></i> Marketing analytics & strategy</li>
+            <li><i class="fas fa-check"></i> Entrepreneurship & innovation</li>
+          </ul>
+          
+          <div class="social-links">
+            <a href="#" class="social-link linkedin">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="#" class="social-link">
+              <i class="fas fa-file-pdf"></i> Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <h3>Strengths</h3>
-      <ul>
-        <li>Program delivery & logistics</li>
-        <li>Learner + facilitator experience</li>
-        <li>Curriculum resource creation</li>
-        <li>Stakeholder coordination</li>
-        <li>Documentation + templates</li>
-        <li>Feedback → improvements</li>
-      </ul>
-    </section>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo-mark">BM</div>
+          <div>
+            <h3>Bidzina Mosiashvili</h3>
+            <p>Marketing • AI Education • Entrepreneurship</p>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="footer-credits">
+          <p>© <span id="currentYear">2025</span> Built with HTML, CSS & JavaScript</p>
+          <p class="small-text">Hosted on GitHub Pages • AI Assistant powered by GPT</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="small">Fastest way to reach me:</p>
-
-      <p>
-        Email:
-        <a class="link" href="mailto:Bidmosia@gmail.com?subject=Hello%20Bidzina%20%E2%80%94%20Opportunity&body=Hi%20Bidzina%2C%0A%0A">
-          Bidmosia@gmail.com
-        </a>
-        <button id="copyEmail" class="copy-btn" type="button" style="margin-left:10px;">Copy email</button>
-        <span id="copyStatus" class="small" style="margin-left:10px;"></span>
-      </p>
-
-      <p class="small">
-        Phone: <a class="link" href="tel:+15872206104">587-220-6104</a>
-      </p>
-
-      <h3>Links</h3>
-      <ul>
-        <li>LinkedIn: <a class="link" href="#" target="_blank" rel="noreferrer">Add your link</a></li>
-        <li>Resume PDF: <a class="link" href="resume.pdf" target="_blank" rel="noreferrer">resume.pdf</a></li>
-        <li>Other work: <a class="link" href="#" target="_blank" rel="noreferrer">Add your link</a></li>
-      </ul>
-    </section>
-
-    <footer>
-      <p>© <span id="year"></span> Bidzina Mosiashvili • Built with static HTML/CSS/JS (free hosting via GitHub Pages)</p>
-    </footer>
-
-  </main>
-
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
-
